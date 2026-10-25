@@ -154,7 +154,7 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .rm{grid-column:1/-1;justify-self:start;background:none;border:0;color:var(--muted);text-decoration:underline;font-size:13px;cursor:pointer;padding:0}
 .fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
 .btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
-.cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
+.cart .btn{text-align:center}.err{color:#C0392B;font-size:14px;min-height:0}.okmsg{color:#1FAF55;font-weight:600;font-size:14px}.small{font-size:13px;color:var(--muted)}
 .svc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:8px}
 .sv{border-top:2px solid var(--ink);padding-top:16px}
 @media (max-width:1180px) and (min-width:901px){.svc{grid-template-columns:repeat(3,1fr)}}
@@ -269,13 +269,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <aside class="cart" id="cart" aria-label="Votre commande"><div class="cart-in">
   <div class="cart-h"><h3>Votre commande</h3><button class="x" id="cartx" aria-label="Close">×</button></div>
   <ul id="lines"></ul>
-  <label class="fld">Votre nom<input id="cn" autocomplete="name"></label>
-  <label class="fld">Ville / pays<input id="cc"></label>
-  <a class="btn p wa" id="wa" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+  <label class="fld">Votre nom *<input id="cn" autocomplete="name"></label>
+  <label class="fld">Téléphone / WhatsApp *<input id="cp" type="tel" autocomplete="tel" inputmode="tel"></label>
+  <label class="fld">Ville / pays<input id="cc" autocomplete="address-level2"></label>
+  <label class="fld">Adresse de livraison<input id="ca" autocomplete="street-address"></label>
+  <label class="fld">Remarque (facultatif)<input id="cnote"></label>
+  <input id="hp" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+  <p class="err" id="err" role="alert"></p>
+  <a class="btn p wa" id="wa" href="#">Commander sur WhatsApp</a>
+  <p class="okmsg" id="ok" role="status"></p>
   
   <p class="small">Orange Money 07 20 20 10 13 · Wave 01 71 66 21 42</p>
 </div></aside>
-<script>const SHOP={"wa": "2250171662142", "card": "", "t": {"empty": "Votre commande est vide.", "qty": "Qté", "remove": "Retirer", "added": "Ajouté ✓", "add": "Ajouter à la commande", "msg_hi": "Bonjour Adam, je souhaite commander :", "msg_name": "Nom", "msg_city": "Ville", "on_request": "Prix sur demande", "total": "Total"}};</script>
+<script>const SHOP={"wa": "2250171662142", "card": "", "orders": "https://script.google.com/macros/s/AKfycbxQIt6ZXunG3YlV9E9Yt4zGYX828hOR5Ede4ro0WggmX7tHoDyVfYSztO2oOfA49yHMHA/exec", "t": {"empty": "Votre commande est vide.", "qty": "Qté", "remove": "Retirer", "added": "Ajouté ✓", "add": "Ajouter à la commande", "msg_hi": "Bonjour Adam, je souhaite commander :", "msg_name": "Nom", "msg_city": "Ville", "msg_phone": "Téléphone", "msg_addr": "Adresse", "on_request": "Prix sur demande", "total": "Total", "need": "Merci d'indiquer votre nom et votre numéro de téléphone.", "sending": "Envoi…", "thanks": "Commande {n} enregistrée — WhatsApp s'ouvre.", "thanks0": "WhatsApp s'ouvre…", "order_no": "commande", "wa_label": "Commander sur WhatsApp"}};</script>
 <script>
 (function(){
 var T=SHOP.t, cart=[];
@@ -298,15 +304,30 @@ function render(){
   if(cart.length&&known&&tot){var t=document.createElement('li');t.className='tot';t.innerHTML='<b>'+T.total+'</b><b>'+fmt(tot)+'</b>';ul.appendChild(t)}
   $('#cnt').textContent=n; $('#cartbtn').classList.toggle('has',n>0); link();
 }
-function link(){
+function msg(no){
   var tot=0,known=true;
   var lines=cart.map(function(it){ if(it.p){tot+=it.p*it.q}else{known=false} return '• '+it.q+' × '+it.n+(it.o?' ('+it.o+')':'')+(it.p?' — '+fmt(it.p*it.q):'')});
-  var m=T.msg_hi+'\n'+lines.join('\n');
+  var m=T.msg_hi+(no?' ('+T.order_no+' '+no+')':'')+'\n'+lines.join('\n');
   if(cart.length&&known&&tot)m+='\n'+T.total+' : '+fmt(tot);
-  var nm=$('#cn').value.trim(), ct=$('#cc').value.trim();
-  if(nm)m+='\n'+T.msg_name+' : '+nm; if(ct)m+='\n'+T.msg_city+' : '+ct;
-  $('#wa').href='https://wa.me/'+SHOP.wa+'?text='+encodeURIComponent(m);
-  $('#wa').classList.toggle('off',!cart.length);
+  var nm=$('#cn').value.trim(), ph=$('#cp').value.trim(), ct=$('#cc').value.trim(), ad=$('#ca').value.trim();
+  if(nm)m+='\n'+T.msg_name+' : '+nm; if(ph)m+='\n'+T.msg_phone+' : '+ph; if(ct)m+='\n'+T.msg_city+' : '+ct; if(ad)m+='\n'+T.msg_addr+' : '+ad;
+  return 'https://wa.me/'+SHOP.wa+'?text='+encodeURIComponent(m);
+}
+function link(){ $('#wa').classList.toggle('off',!cart.length); $('#err').textContent=''; }
+function send(){
+  if(!cart.length) return;
+  var nm=$('#cn').value.trim(), ph=$('#cp').value.trim();
+  if(!nm||ph.replace(/\D/g,'').length<8){ $('#err').textContent=T.need; return; }
+  var btn=$('#wa'); btn.classList.add('off'); btn.textContent=T.sending;
+  var done=false; function go(no){ if(done)return; done=true; var url=msg(no);
+    try{localStorage.removeItem('ay_cart')}catch(e){}
+    cart=[]; render(); btn.textContent=T.wa_label; $('#ok').textContent=no?T.thanks.replace('{n}',no):T.thanks0; location.href=url; }
+  if(!SHOP.orders){ go(''); return; }
+  var body=JSON.stringify({name:nm,phone:ph,city:$('#cc').value.trim(),address:$('#ca').value.trim(),note:$('#cnote').value.trim(),
+    website:$('#hp').value,lang:document.documentElement.lang,items:cart.map(function(it){return {n:it.n,o:it.o,p:it.p,q:it.q}})});
+  setTimeout(function(){go('')},8000);
+  fetch(SHOP.orders,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:body})
+    .then(function(r){return r.json()}).then(function(j){go(j&&j.ok?j.order:'')}).catch(function(){go('')});
 }
 document.querySelectorAll('.prod .add').forEach(function(b){b.onclick=function(){
   var c=b.closest('.prod'), o=[].map.call(c.querySelectorAll('select'),function(x){return x.value}).join(' · ');
@@ -319,8 +340,7 @@ document.querySelectorAll('.chip').forEach(function(ch){ch.onclick=function(){
   document.querySelectorAll('.prod').forEach(function(p){p.style.display=(ch.dataset.c==='*'||p.dataset.c===ch.dataset.c)?'':'none'})}});
 $('#cartbtn').onclick=function(){$('#cart').classList.add('open')};
 $('#cartx').onclick=function(){$('#cart').classList.remove('open')};
-$('#cn').oninput=link; $('#cc').oninput=link;
-$('#wa').addEventListener('click',function(e){if(!cart.length)e.preventDefault()});
+$('#wa').addEventListener('click',function(e){e.preventDefault(); send();});
 render();
 })();
 </script>
