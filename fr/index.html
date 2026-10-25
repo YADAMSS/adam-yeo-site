@@ -88,6 +88,7 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .post{overflow:hidden}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{width:30px;height:30px}
+.logo span{margin-left:-9px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1)}}
 :root[data-theme="dark"] .logo img{filter:invert(1)}
 .card small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
@@ -120,6 +121,37 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .art .sig img{width:56px;height:56px;border-radius:50%;object-fit:cover}
 .art .sig b{display:block}
 .art .sig span{color:var(--muted);font-size:14.5px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 26px}
+.chip{border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:8px 16px;font:600 14px "Inter";cursor:pointer}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:var(--paper2);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pimg{aspect-ratio:1;background:#ECE5DB;overflow:hidden}.pimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.prod:hover .pimg img{transform:scale(1.03)}
+.pbody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbody small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pbody h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
+.pbody p{font-size:15px;color:var(--muted);flex:1}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 6px}
+.price{font-size:16px}
+.opt{font-size:14px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.opt select{font:500 14px "Inter";padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.prod .btn{width:100%;text-align:center;cursor:pointer;font-family:"Inter"}
+.how{list-style:none;counter-reset:a}.how li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.how li span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.payl{list-style:none}.payl li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid var(--line);flex-wrap:wrap}.payl span{color:var(--muted)}
+.cartbtn{position:fixed;right:20px;bottom:20px;z-index:20;background:var(--ink);color:var(--paper);border:0;border-radius:99px;padding:14px 20px;font:600 15px "Inter";cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cartbtn b{display:inline-block;min-width:24px;padding:1px 7px;border-radius:99px;background:var(--accent);color:#fff;margin-left:6px}
+.cart{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.4);display:none}.cart.open{display:block}
+.cart-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--paper);padding:24px;overflow:auto;display:flex;flex-direction:column;gap:14px}
+.cart-h{display:flex;justify-content:space-between;align-items:center}.cart-h h3{margin:0;color:var(--ink);font-size:16px}
+.x{background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:var(--ink)}
+#lines{list-style:none}#lines li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+#lines li span{display:block;color:var(--muted);font-size:13.5px}#lines .empty{display:block;color:var(--muted)}#lines .tot{display:flex;justify-content:space-between}
+.q{display:flex;align-items:center;gap:8px}.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}.q em{font-style:normal;min-width:16px;text-align:center}
+.rm{grid-column:1/-1;justify-self:start;background:none;border:0;color:var(--muted);text-decoration:underline;font-size:13px;cursor:pointer;padding:0}
+.fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
+.btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
+.cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
 .pubs{list-style:none;margin-top:36px}
 .pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
 .contact{background:var(--ink);color:var(--paper);border-bottom:0}
@@ -150,6 +182,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
+ .grid-p{grid-template-columns:1fr 1fr;gap:14px}.pbody{padding:14px}.pbody h3{font-size:17px}.pbody p{display:none}
  .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}
  .list li{grid-template-columns:78px 1fr}
@@ -160,7 +193,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <body>
 <header><div class="wrap bar">
   <a class="logo" href="/fr/"><img src="/img/logo.png" alt="" width="30" height="30">Adam Yeo<span>.</span></a>
-  <nav id="nav"><a href="#top">Accueil</a><a href="#about">À propos</a><a href="#type-design">Typographie</a><a href="#research">Recherche</a><a href="#exhibitions">Expositions & conférences</a><a href="#writing">Écrits</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
+  <nav id="nav"><a href="#top">Accueil</a><a href="#about">À propos</a><a href="#type-design">Typographie</a><a href="#research">Recherche</a><a href="#exhibitions">Expositions & conférences</a><a href="#writing">Écrits</a><a href="#blog">Blog</a><a href="/fr/boutique/">Boutique</a><a href="#contact">Contact</a></nav>
   <div style="display:flex;gap:10px;align-items:center">
     <div class="lang"><b>FR</b><a href="/" hreflang="en">EN</a></div>
     <button class="menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">Menu</button>
@@ -229,7 +262,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <p>Pour un projet typographique, une collaboration de recherche, une conférence, un atelier ou une exposition, écrivez-moi.</p>
   <div class="cgrid">
     <a href="mailto:yeo.adam@ubkou.edu.ci"><small>E-mail</small><b>yeo.adam@ubkou.edu.ci</b></a>
-    <a href="https://wa.me/2250720201013" target="_blank" rel="noopener"><small>Téléphone / WhatsApp</small><b>+225 07 20 20 10 13</b></a>
+    <a href="https://wa.me/2250171662142" target="_blank" rel="noopener"><small>Téléphone / WhatsApp</small><b>+225 01 71 66 21 42</b></a>
     <div><small>Localisation</small><b>Bondoukou, Côte d'Ivoire</b></div>
   </div>
   <div class="social">

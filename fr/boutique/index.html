@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boutique — Adam Yeo</title>
+<meta name="description" content="Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
+<link rel="canonical" href="https://adamyeo.com/fr/boutique/">
+<link rel="alternate" hreflang="en" href="https://adamyeo.com/blog/a-script-you-cannot-type/">
+<link rel="alternate" hreflang="fr" href="https://adamyeo.com/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/">
+<meta property="og:title" content="Boutique — Adam Yeo">
+<meta property="og:description" content="Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
+<meta property="og:image" content="https://adamyeo.com/img/og.jpg">
+<meta property="og:url" content="https://adamyeo.com/fr/boutique/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F1EA;--paper2:#EFE7DC;--ink:#1B1A17;--muted:#5E574E;--line:#DDD3C5;--accent:#D9481C;--accent2:#E9A23B;--deep:#123A3F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#161512;--paper2:#1F1D19;--ink:#F3EDE4;--muted:#B5AC9F;--line:#35312B;--accent:#F06A3C;--accent2:#F0B24E;--deep:#9FD3D0}}
+:root[data-theme="dark"]{--paper:#161512;--paper2:#1F1D19;--ink:#F3EDE4;--muted:#B5AC9F;--line:#35312B;--accent:#F06A3C;--accent2:#F0B24E;--deep:#9FD3D0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 "Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:23px;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:17px;align-items:center}
+nav a{text-decoration:none;font-size:14.5px;white-space:nowrap;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;font-weight:600}
+.lang a,.lang b{padding:5px 11px;text-decoration:none}
+.lang b{background:var(--ink);color:var(--paper)}
+.menu{display:none;background:none;border:0;font:600 15px "Inter";color:var(--ink);cursor:pointer}
+.hero{padding:72px 0 56px}
+.hero .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:center;margin-bottom:56px}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(60px,9vw,118px);line-height:.95;margin:14px 0 22px;letter-spacing:-.025em}
+.lead{font-size:clamp(19px,2.1vw,23px);line-height:1.5;max-width:34ch}
+.role{margin-top:16px;color:var(--muted);font-size:15px}
+.btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.portrait{position:relative}
+.portrait{max-width:400px;justify-self:end;width:100%}
+.portrait img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
+.portrait::before{content:"";position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:var(--accent2);right:-10%;top:-5%;z-index:-1}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+.facts div{padding:22px 18px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:24px;line-height:1.1}
+.facts span{font-size:14px;color:var(--muted)}
+section.s{padding:88px 0;border-bottom:1px solid var(--line)}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+.sh i{font-style:normal;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.1em}
+h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(38px,5vw,56px);line-height:1}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.prose p{margin-bottom:16px;max-width:62ch}
+.prose p:first-child{font-size:20px;line-height:1.55}
+.list{list-style:none}
+.list li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:15.5px}
+.list li.b{grid-template-columns:16px 1fr}
+.list li span{color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
+h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card.full{margin-top:36px}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden}
+.ctxt,.wtxt{padding:24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.thumb{aspect-ratio:3/2;overflow:hidden;background:#fff}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .thumb img{transform:scale(1.03)}
+.thumb.contain{display:flex;align-items:center;justify-content:center;padding:18px}
+.thumb.contain img{object-fit:contain}
+.card.wide .thumb{aspect-ratio:auto;width:38%;flex:none}
+.card.wide.acdi .thumb{display:flex;align-items:center;justify-content:center;padding:28px;background:#fff}
+.card.wide.acdi .thumb img{object-fit:contain;height:auto;max-height:120px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.gal figure{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/2;background:#fff}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px}
+.aboutpic{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin-bottom:26px}
+.post img{width:calc(100% + 64px);margin:-30px -32px 22px;height:200px;object-fit:cover;display:block;background:#fff}
+.post{overflow:hidden}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:30px;height:30px}
+.logo span{margin-left:-9px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1)}}
+:root[data-theme="dark"] .logo img{filter:invert(1)}
+.card small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.card h4{font-size:22px;font-weight:700;line-height:1.2}
+.card p{font-size:15.5px;color:var(--muted);flex:1}
+.card a{font-weight:600;font-size:15px;text-decoration:none;color:var(--ink)}
+.card a::after{content:" →"}
+.card.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
+.card.feature2{background:var(--deep);color:var(--paper);border:0}.card.feature2 small{color:var(--accent2)}.card.feature2 p,.card.feature2 a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
+.card.feature{grid-column:span 2;background:var(--deep);color:var(--paper);border:0;position:relative;overflow:hidden;min-height:300px}
+.card.feature small{color:var(--accent2)}
+.card.feature p,.card.feature a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
+.card.feature .spec{font-family:"Fraunces",Georgia,serif;font-size:clamp(56px,8vw,104px);line-height:.95;margin:6px 0 4px;color:var(--paper)}
+.intro-b{color:var(--muted);margin:-14px 0 26px;max-width:60ch}
+.post{display:block;text-decoration:none;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:30px 32px;max-width:820px}
+.post:hover{border-color:var(--ink)}
+.post small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.post h4{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,3.2vw,36px);line-height:1.15;margin:10px 0 10px}
+.post p{color:var(--muted);margin-bottom:14px}
+.post span{font-weight:600}
+.art{max-width:720px;margin:0 auto;padding:56px 24px 88px}
+.art .back{font-weight:600;text-decoration:none;color:var(--muted);font-size:15px}
+.art small{display:block;margin-top:34px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.art h1{font-size:clamp(38px,6vw,62px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.art .meta{color:var(--muted);font-size:15px;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.art p{font-size:18.5px;line-height:1.75;margin-bottom:22px}
+.art p:first-of-type{font-size:21px;line-height:1.6}
+.art h2{font-size:30px;margin:44px 0 16px}
+.art .sig{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;gap:16px;align-items:center}
+.art .sig img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.art .sig b{display:block}
+.art .sig span{color:var(--muted);font-size:14.5px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 26px}
+.chip{border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:8px 16px;font:600 14px "Inter";cursor:pointer}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:var(--paper2);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pimg{aspect-ratio:1;background:#ECE5DB;overflow:hidden}.pimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.prod:hover .pimg img{transform:scale(1.03)}
+.pbody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbody small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pbody h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
+.pbody p{font-size:15px;color:var(--muted);flex:1}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 6px}
+.price{font-size:16px}
+.opt{font-size:14px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.opt select{font:500 14px "Inter";padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.prod .btn{width:100%;text-align:center;cursor:pointer;font-family:"Inter"}
+.how{list-style:none;counter-reset:a}.how li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.how li span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.payl{list-style:none}.payl li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid var(--line);flex-wrap:wrap}.payl span{color:var(--muted)}
+.cartbtn{position:fixed;right:20px;bottom:20px;z-index:20;background:var(--ink);color:var(--paper);border:0;border-radius:99px;padding:14px 20px;font:600 15px "Inter";cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cartbtn b{display:inline-block;min-width:24px;padding:1px 7px;border-radius:99px;background:var(--accent);color:#fff;margin-left:6px}
+.cart{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.4);display:none}.cart.open{display:block}
+.cart-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--paper);padding:24px;overflow:auto;display:flex;flex-direction:column;gap:14px}
+.cart-h{display:flex;justify-content:space-between;align-items:center}.cart-h h3{margin:0;color:var(--ink);font-size:16px}
+.x{background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:var(--ink)}
+#lines{list-style:none}#lines li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+#lines li span{display:block;color:var(--muted);font-size:13.5px}#lines .empty{display:block;color:var(--muted)}#lines .tot{display:flex;justify-content:space-between}
+.q{display:flex;align-items:center;gap:8px}.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}.q em{font-style:normal;min-width:16px;text-align:center}
+.rm{grid-column:1/-1;justify-self:start;background:none;border:0;color:var(--muted);text-decoration:underline;font-size:13px;cursor:pointer;padding:0}
+.fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
+.btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
+.cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
+.pubs{list-style:none;margin-top:36px}
+.pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
+.contact{background:var(--ink);color:var(--paper);border-bottom:0}
+.contact h2{color:var(--paper)}
+.contact p{color:color-mix(in srgb,var(--paper) 80%,transparent);font-size:19px;max-width:44ch;margin:18px 0 34px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cgrid a,.cgrid div{display:block;padding:20px 22px;border:1px solid color-mix(in srgb,var(--paper) 22%,transparent);border-radius:16px;text-decoration:none}
+.cgrid small{display:block;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:4px}
+.cgrid b{font-weight:600;font-size:16.5px;word-break:break-word}
+.social{display:flex;gap:18px;margin-top:30px;flex-wrap:wrap}
+.social a{color:var(--paper);font-weight:600;font-size:15px}
+footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 60%,transparent);font-size:13.5px;padding:22px 0 30px;border-top:1px solid color-mix(in srgb,var(--paper) 14%,transparent)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.theme{background:none;border:1px solid var(--line);border-radius:999px;color:var(--ink);font:600 13px "Inter";padding:5px 10px;cursor:pointer}
+@media (max-width:1080px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+ nav.open{display:flex} nav a{padding:10px 0;font-size:17px}
+ .menu{display:block}
+}
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+ nav.open{display:flex} nav a{padding:10px 0;font-size:17px}
+ .menu{display:block}
+ .hero{padding:40px 0}
+ .hero .grid,.two{grid-template-columns:1fr;gap:36px}
+ .portrait{max-width:240px;justify-self:start;margin:28px 0 0 8px}
+ .facts{grid-template-columns:1fr 1fr}
+ .facts div:nth-child(2){border-right:0}
+ .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .cards,.cgrid{grid-template-columns:1fr}
+ .grid-p{grid-template-columns:1fr 1fr;gap:14px}.pbody{padding:14px}.pbody h3{font-size:17px}.pbody p{display:none}
+ .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
+ section.s{padding:64px 0}
+ .list li{grid-template-columns:78px 1fr}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adam Yeo","honorificPrefix":"Dr","jobTitle":"Enseignant-chercheur en design graphique, Université de Bondoukou, Côte d'Ivoire","url":"https://adamyeo.com/","image":"https://adamyeo.com/img/adam-yeo.jpg","sameAs":["https://www.linkedin.com/in/adam-yeo/","https://github.com/YADAMSS","https://fonts.google.com/specimen/Matemasie"]}</script>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="/fr/"><img src="/img/logo.png" alt="" width="30" height="30">Adam Yeo<span>.</span></a>
+  <nav id="nav"><a href="/fr/#top">Accueil</a><a href="/fr/#about">À propos</a><a href="/fr/#type-design">Typographie</a><a href="/fr/#research">Recherche</a><a href="/fr/#exhibitions">Expositions & conférences</a><a href="/fr/#writing">Écrits</a><a href="/fr/#blog">Blog</a><a href="/fr/boutique/">Boutique</a><a href="/fr/#contact">Contact</a></nav>
+  <div style="display:flex;gap:10px;align-items:center">
+    <div class="lang"><b>FR</b><a href="/shop/" hreflang="en">EN</a></div>
+    <button class="menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">Menu</button>
+  </div>
+</div></header>
+
+<main><section class="s shop"><div class="wrap">
+  <div class="sh"><h2 style="font-size:clamp(44px,6vw,72px)">Boutique</h2></div>
+  <p class="intro-b" style="margin-top:-18px;font-size:19px">Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.</p>
+  <div class="chips"><button class="chip on" data-c="*">Tout</button><button class="chip" data-c="Affiche">Affiches</button><button class="chip" data-c="T-shirt">T-shirts</button><button class="chip" data-c="Livre">Livres</button></div>
+  <div class="grid-p"><article class="prod" data-c="Affiche" data-id="poster-charite" data-name="« La Charité » — affiche typographique bété" data-price="0">
+  <div class="pimg"><img src="/img/shop/poster-charite.jpg" alt="« La Charité » — affiche typographique bété" loading="lazy"></div>
+  <div class="pbody"><small>Affiche</small><h3>« La Charité » — affiche typographique bété</h3><p>Une affiche construite avec les signes du syllabaire bété. Impression sur papier de qualité, signée.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Affiche" data-id="poster-alphabet" data-name="Affiche « Bété Alphabet »" data-price="0">
+  <div class="pimg"><img src="/img/shop/poster-alphabet.jpg" alt="Affiche « Bété Alphabet »" loading="lazy"></div>
+  <div class="pbody"><small>Affiche</small><h3>Affiche « Bété Alphabet »</h3><p>Une affiche typographique colorée qui célèbre l'écriture bété et le dessin de caractères.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Affiche" data-id="poster-glyphes" data-name="Planche des caractères bété" data-price="0">
+  <div class="pimg"><img src="/img/shop/poster-glyphes.jpg" alt="Planche des caractères bété" loading="lazy"></div>
+  <div class="pbody"><small>Affiche</small><h3>Planche des caractères bété</h3><p>La planche complète de la police bété : tous les signes du syllabaire sur une seule feuille.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Affiche" data-id="poster-matemasie" data-name="Affiche Matemasie" data-price="0">
+  <div class="pimg"><img src="/img/shop/poster-matemasie.jpg" alt="Affiche Matemasie" loading="lazy"></div>
+  <div class="pbody"><small>Affiche</small><h3>Affiche Matemasie</h3><p>La police Matemasie et le symbole adinkra Mate Masie — « ce que j'entends, je le garde ».</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="tshirt-matemasie" data-name="T-shirt Matemasie « Kid Boy Girl »" data-price="0">
+  <div class="pimg"><img src="/img/shop/tshirt-matemasie.jpg" alt="T-shirt Matemasie « Kid Boy Girl »" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>T-shirt Matemasie « Kid Boy Girl »</h3><p>T-shirt en coton bleu marine, lettrage Matemasie.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="tshirt-bete" data-name="T-shirt Signes bété" data-price="0">
+  <div class="pimg"><img src="/img/shop/tshirt-bete.jpg" alt="T-shirt Signes bété" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>T-shirt Signes bété</h3><p>T-shirt en coton blanc imprimé de quatre signes du syllabaire bété.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Livre" data-id="livre-bete" data-name="« Adam Yeo: Bété Typeface »" data-price="0">
+  <div class="pimg"><img src="/img/shop/livre-bete-typeface.jpg" alt="« Adam Yeo: Bété Typeface »" loading="lazy"></div>
+  <div class="pbody"><small>Livre</small><h3>« Adam Yeo: Bété Typeface »</h3><p>Livret de 28 pages sur la police bété, publié par Sming Sming Books avec SILICON (Université Stanford).</p>
+  <div class="prow"><b class="price">Prix sur demande</b></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article></div>
+  <div class="two" style="margin-top:64px">
+    <div><h3>Comment ça marche</h3><ol class="how"><li><span>1</span>Choisissez vos articles et cliquez sur « Commander sur WhatsApp ».</li><li><span>2</span>Je vous réponds avec le prix, les frais et le délai de livraison.</li><li><span>3</span>Vous payez par Orange Money, Wave ou carte bancaire.</li><li><span>4</span>Votre commande est expédiée : Bondoukou, Abidjan ou à l'étranger.</li></ol></div>
+    <div><h3>Paiement</h3><ul class="payl"><li><b>Orange Money</b><span>07 20 20 10 13</span></li><li><b>Wave</b><span>01 71 66 21 42</span></li><li><b>Carte (Visa / Mastercard)</b><span>Lien de paiement par carte envoyé sur demande.</span></li></ul></div>
+  </div>
+</div></section>
+<button class="cartbtn" id="cartbtn" aria-controls="cart">Commande <b id="cnt">0</b></button>
+<aside class="cart" id="cart" aria-label="Votre commande"><div class="cart-in">
+  <div class="cart-h"><h3>Votre commande</h3><button class="x" id="cartx" aria-label="Close">×</button></div>
+  <ul id="lines"></ul>
+  <label class="fld">Votre nom<input id="cn" autocomplete="name"></label>
+  <label class="fld">Ville / pays<input id="cc"></label>
+  <a class="btn p wa" id="wa" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+  
+  <p class="small">Orange Money 07 20 20 10 13 · Wave 01 71 66 21 42</p>
+</div></aside>
+<script>const SHOP={"wa": "2250171662142", "card": "", "t": {"empty": "Votre commande est vide.", "qty": "Qté", "remove": "Retirer", "added": "Ajouté ✓", "add": "Ajouter à la commande", "msg_hi": "Bonjour Adam, je souhaite commander :", "msg_name": "Nom", "msg_city": "Ville", "on_request": "Prix sur demande", "total": "Total"}};</script>
+<script>
+(function(){
+var T=SHOP.t, cart=[];
+try{cart=JSON.parse(localStorage.getItem('ay_cart')||'[]')}catch(e){}
+function save(){try{localStorage.setItem('ay_cart',JSON.stringify(cart))}catch(e){}}
+var $=function(s){return document.querySelector(s)};
+function fmt(n){return n?n.toLocaleString('fr-FR').replace(/\u202f/g,' ')+' F CFA':T.on_request}
+function render(){
+  var ul=$('#lines'); ul.innerHTML='';
+  var n=0,tot=0,known=true;
+  if(!cart.length){ul.innerHTML='<li class="empty">'+T.empty+'</li>'}
+  cart.forEach(function(it,i){n+=it.q; if(it.p){tot+=it.p*it.q}else{known=false}
+    var li=document.createElement('li');
+    li.innerHTML='<div><b></b><span></span></div><div class="q"><button aria-label="-">−</button><em></em><button aria-label="+">+</button></div><button class="rm"></button>';
+    li.querySelector('b').textContent=it.n; li.querySelector('span').textContent=(it.o?it.o+' · ':'')+fmt(it.p);
+    li.querySelector('em').textContent=it.q; li.querySelector('.rm').textContent=T.remove;
+    var b=li.querySelectorAll('.q button'); b[0].onclick=function(){it.q=Math.max(1,it.q-1);save();render()}; b[1].onclick=function(){it.q++;save();render()};
+    li.querySelector('.rm').onclick=function(){cart.splice(i,1);save();render()};
+    ul.appendChild(li)});
+  if(cart.length&&known&&tot){var t=document.createElement('li');t.className='tot';t.innerHTML='<b>'+T.total+'</b><b>'+fmt(tot)+'</b>';ul.appendChild(t)}
+  $('#cnt').textContent=n; $('#cartbtn').classList.toggle('has',n>0); link();
+}
+function link(){
+  var lines=cart.map(function(it){return '• '+it.q+' × '+it.n+(it.o?' ('+it.o+')':'')});
+  var m=T.msg_hi+'\n'+lines.join('\n');
+  var nm=$('#cn').value.trim(), ct=$('#cc').value.trim();
+  if(nm)m+='\n'+T.msg_name+' : '+nm; if(ct)m+='\n'+T.msg_city+' : '+ct;
+  $('#wa').href='https://wa.me/'+SHOP.wa+'?text='+encodeURIComponent(m);
+  $('#wa').classList.toggle('off',!cart.length);
+}
+document.querySelectorAll('.prod .add').forEach(function(b){b.onclick=function(){
+  var c=b.closest('.prod'), s=c.querySelector('select'), o=s?s.value:'';
+  var id=c.dataset.id+'|'+o, f=cart.find(function(x){return x.id===id});
+  if(f)f.q++; else cart.push({id:id,n:c.dataset.name,o:o,p:+c.dataset.price||0,q:1});
+  save(); render(); b.textContent=T.added; setTimeout(function(){b.textContent=T.add},1400);
+}});
+document.querySelectorAll('.chip').forEach(function(ch){ch.onclick=function(){
+  document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')}); ch.classList.add('on');
+  document.querySelectorAll('.prod').forEach(function(p){p.style.display=(ch.dataset.c==='*'||p.dataset.c===ch.dataset.c)?'':'none'})}});
+$('#cartbtn').onclick=function(){$('#cart').classList.add('open')};
+$('#cartx').onclick=function(){$('#cart').classList.remove('open')};
+$('#cn').oninput=link; $('#cc').oninput=link;
+$('#wa').addEventListener('click',function(e){if(!cart.length)e.preventDefault()});
+render();
+})();
+</script>
+</main>
+
+<footer><div class="wrap"><span>© <span id="y">2026</span> Adam Yeo · Composé en Fraunces et Inter.</span><button class="theme" aria-label="Light / dark" onclick="var d=document.documentElement,c=d.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';d.setAttribute('data-theme',n);try{localStorage.setItem('t',n)}catch(e){}">Light / Dark</button></div></footer>
+<script>try{var s=localStorage.getItem('t');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});</script>
+</body></html>
