@@ -154,6 +154,12 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
 .btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
 .cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:8px}
+.sv{border-top:2px solid var(--ink);padding-top:16px}
+@media (max-width:1180px) and (min-width:901px){.svc{grid-template-columns:repeat(3,1fr)}}
+.sv span{font-size:13px;font-weight:700;color:var(--accent)}
+.sv h4{font-size:18px;font-weight:700;line-height:1.25;margin:8px 0}
+.sv p{font-size:15px;color:var(--muted)}
 .pubs{list-style:none;margin-top:36px}
 .pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
 .contact{background:var(--ink);color:var(--paper);border-bottom:0}
@@ -184,6 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
+ .svc{grid-template-columns:1fr 1fr}
  .grid-p{grid-template-columns:1fr 1fr;gap:14px}.pbody{padding:14px}.pbody h3{font-size:17px}.pbody p{display:none}
  .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}
@@ -225,14 +232,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <article class="card wide full acdi"><div class="thumb"><img src="/img/work/acdi-logo.png" alt="Centre ACDI Bondoukou" loading="lazy"></div><div class="wtxt"><small>Education · Bondoukou · 2026</small><h4>Centre ACDI Bondoukou</h4><p>Founder of a centre for art, design and innovation offering painting, ceramics, computing, graphic design and AI workshops for children, teenagers and adults.</p><a href="https://yadamss.github.io/acdi-bondoukou/" target="_blank" rel="noopener">Visit the centre</a></div></article>
 </div></section>
 
+<section class="s" id="services"><div class="wrap">
+  <div class="kicker" style="margin-bottom:10px">Services</div>
+  <div class="sh"><i>02</i><h2>My Design Expertise and Skills</h2></div>
+  <p class="intro-b" style="font-size:19px;max-width:70ch">My work focuses on typography, visual research, and graphic design, exploring the relationship between writing systems, culture, and visual language, with a particular focus on African scripts such as the Bété script system.</p>
+  <div class="svc"><div class="sv"><span>01</span><h4>Typography Design</h4><p>Typefaces and lettering for display and text, from first sketches to finished, multilingual digital fonts.</p></div><div class="sv"><span>02</span><h4>Writing Systems Research</h4><p>Historical and visual research on scripts, their signs, their logic and their place in culture.</p></div><div class="sv"><span>03</span><h4>Visual Language Development</h4><p>Visual identities and graphic systems rooted in cultural symbols, for institutions, brands and projects.</p></div><div class="sv"><span>04</span><h4>African Script Studies</h4><p>Documentation, digitisation and Unicode work for African scripts, with a focus on the Bété syllabary.</p></div><div class="sv"><span>05</span><h4>Experimental Typographic Design</h4><p>Posters, installations and objects that explore scripts as images — from exhibitions to the Bété Type clothing line.</p></div></div>
+</div></section>
+
 <section class="s" id="type-design"><div class="wrap">
-  <div class="sh"><i>02</i><h2>Type Design</h2></div>
+  <div class="sh"><i>03</i><h2>Type Design</h2></div>
   <div class="cards"><article class="card feature2"><div class="thumb"><img src="/img/work/matemasie.jpg" alt="Matemasie" loading="lazy"></div><div class="ctxt"><small>Type design · Google Fonts · 2024</small><h4>Matemasie</h4><p>An ultra-bold display typeface with rounded edges and top-heavy letterforms, inspired by the Adinkra symbol Mate Masie — “what I hear, I keep” — a sign of wisdom, listening and knowledge. Free and open source.</p><a href="https://fonts.google.com/specimen/Matemasie" target="_blank" rel="noopener">View on Google Fonts</a></div></article><article class="card"><div class="thumb contain"><img src="/img/work/bete-signs.jpg" alt="Bété typeface" loading="lazy"></div><div class="ctxt"><small>Type design · Unicode · since 2022</small><h4>Bété typeface</h4><p>A digital typeface for the Bété syllabary, created by Frédéric Bruly Bouabré. Developed at ANRT and with the Script Encoding Initiative (UC Berkeley), it supports the proposal to encode Bété in Unicode.</p><a href="https://www.unicode.org/L2/L2023/23279-bete-report.pdf" target="_blank" rel="noopener">Unicode working document</a></div></article><article class="card"><div class="thumb"><img src="/img/work/bete-poster-charite.jpg" alt="Adam Yeo: Bété Typeface" loading="lazy"></div><div class="ctxt"><small>Publication · Stanford SILICON · 2026</small><h4>Adam Yeo: Bété Typeface</h4><p>A 28-page booklet on the Bété typeface, published by Sming Sming Books in partnership with SILICON, Stanford University.</p></div></article><article class="card"><div class="thumb"><img src="/img/work/matemasie-alphabet.jpg" alt="Extended Latin for African languages" loading="lazy"></div><div class="ctxt"><small>Type design · Google Fonts · since 2023</small><h4>Extended Latin for African languages</h4><p>Contract type designer for Google Fonts, extending Latin character sets so that African languages can be written correctly in digital type.</p></div></article></div>
   <div class="gal"><figure><img src="/img/work/matemasie-pattern.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-kid-boy-girl.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-symbol.jpg" alt="Mate Masie" loading="lazy"><figcaption>Mate Masie</figcaption></figure><figure><img src="/img/work/bete-glyph-chart.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-alphabet.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-charite.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure></div>
 </div></section>
 
 <section class="s" id="research"><div class="wrap">
-  <div class="sh"><i>03</i><h2>Research</h2></div>
+  <div class="sh"><i>04</i><h2>Research</h2></div>
   <div class="two">
     <div class="prose"><p>Typography and type design for African scripts · the Bété script and graphic symbols of Côte d'Ivoire · digital humanities and Unicode encoding · digital cultural heritage.</p></div>
     <ul class="list"><li><span>2026 –</span><div>Research Affiliate, VIEWS project (Visual Interactions in Early Writing Systems), Faculty of Classics, University of Cambridge — Visiting Fellow, Lent Term 2026: “Writing as image: a comparative visual study of the Bété and Chinese scripts”.</div></li><li><span>2026–2028</span><div>Advisory Board member, Stanford SILICON and UNESCO Chair in Digital Futures, Stanford University.</div></li><li><span>2024–2025</span><div>SEI Research Fellow, Bété Digital Inclusion Project, Script Encoding Initiative, UC Berkeley.</div></li><li><span>2023 –</span><div>Contract type designer, Google Fonts.</div></li></ul>
@@ -240,7 +254,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div></section>
 
 <section class="s" id="exhibitions"><div class="wrap">
-  <div class="sh"><i>04</i><h2>Exhibitions & Talks</h2></div>
+  <div class="sh"><i>05</i><h2>Exhibitions & Talks</h2></div>
   <div class="two">
     <ul class="list"><li><span>2026</span><div>Seminar — “Writing as image: Bété and Chinese scripts”, University of Cambridge</div></li><li><span>2025</span><div>Keynote — “The future of the Bété script: towards digital inclusion”, FACE/INTERFACE, Stanford University</div></li><li><span>2025</span><div>Exhibition & talk — “Bété script: heritage and future in the digital age”, Institut français de Côte d'Ivoire, Abidjan</div></li><li><span>2025</span><div>World Endangered Writing Day — typography and the preservation of minority scripts (online)</div></li><li><span>2025</span><div>International conference on art criticism in Africa, University of Bondoukou</div></li><li><span>2024</span><div>DeScripto-LARSH, Université Polytechnique Hauts-de-France</div></li><li><span>2023</span><div>Inscript Collective · Hello Departures · OCAD University &amp; ANRT · Castel Coucou, Nancy</div></li><li><span>2021</span><div>ATypI All Over — “The Bété script (Côte d'Ivoire) in typography”</div></li><li><span>2021</span><div>Exhibition “The Way of Characters”, Art Museum of Nanjing University of the Arts</div></li></ul>
     <div><h3>Juries & recognition</h3><ul class="list"><li class="b"><span>•</span><div>Jury, Connect &amp; Create (visual arts) — EU, Goethe-Institut, Expertise France, Institut français (2026–2028)</div></li><li class="b"><span>•</span><div>Judge, Student Traveling Typography Exhibition “Glyphs of Belonging”, Sharjah (2026)</div></li><li class="b"><span>•</span><div>Reviewer, ATypI 2026 conference (Stanford &amp; Sharjah)</div></li><li class="b"><span>•</span><div>Third prize for doctoral excellence, Nanjing University of the Arts (2021)</div></li><li class="b"><span>•</span><div>Invited to the World Bank Group Youth Conference, Washington D.C. (2019)</div></li><li class="b"><span>•</span><div>Award, “Little Hakka” international picture-book competition, China (2018)</div></li></ul></div>
@@ -249,18 +263,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div></section>
 
 <section class="s" id="writing"><div class="wrap">
-  <div class="sh"><i>05</i><h2>Writing</h2></div>
+  <div class="sh"><i>06</i><h2>Writing</h2></div>
   <ul class="pubs" style="margin-top:0"><li>Yeo, A. (2026). <em>Adam Yeo: Bété Typeface</em>. Sming Sming Books / SILICON, Stanford University.</li><li>Yeo, A., Anderson, D., MacLean, J. &amp; Patel, N. (2023). <em>Bété (Ivorian alphabet) working document</em>. Unicode Technical Committee, L2/23-279.</li><li>Yeo, A. &amp; Cao, F. (2021). “A Creative Research Process for a Modern African Graphic Design Identity: The Case of Ivory Coast.” <em>Art and Design Review</em>, 9, 210–231.</li><li>Yeo, A. &amp; Cao, F. (2021). “Study on the Application of the Bété Script in Modern Graphic Design.” <em>Art and Design Review</em>, 9, 156–179.</li></ul>
 </div></section>
 
 <section class="s" id="blog"><div class="wrap">
-  <div class="sh"><i>06</i><h2>Blog</h2></div>
+  <div class="sh"><i>07</i><h2>Blog</h2></div>
   <p class="intro-b">Notes on typography, African writing systems, design and teaching.</p>
   <a class="post" href="/blog/a-script-you-cannot-type/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 October 2026 · Type design · Bété script</small><h4>A script you cannot type is a script at risk</h4><p>Why I spend years drawing letters for the Bété syllabary — and what it takes for an African script to live on phones and computers.</p><span>Read the article →</span></a>
 </div></section>
 
 <section class="s contact" id="contact"><div class="wrap">
-  <div class="sh"><i style="color:var(--accent2)">07</i><h2>Let's work together</h2></div>
+  <div class="sh"><i style="color:var(--accent2)">08</i><h2>Let's work together</h2></div>
   <p>For type design, research collaborations, talks, workshops or exhibitions, write to me.</p>
   <div class="cgrid">
     <a href="mailto:yeo.adam@ubkou.edu.ci"><small>Email</small><b>yeo.adam@ubkou.edu.ci</b></a>

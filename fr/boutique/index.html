@@ -154,6 +154,12 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
 .btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
 .cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:8px}
+.sv{border-top:2px solid var(--ink);padding-top:16px}
+@media (max-width:1180px) and (min-width:901px){.svc{grid-template-columns:repeat(3,1fr)}}
+.sv span{font-size:13px;font-weight:700;color:var(--accent)}
+.sv h4{font-size:18px;font-weight:700;line-height:1.25;margin:8px 0}
+.sv p{font-size:15px;color:var(--muted)}
 .pubs{list-style:none;margin-top:36px}
 .pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
 .contact{background:var(--ink);color:var(--paper);border-bottom:0}
@@ -184,6 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
+ .svc{grid-template-columns:1fr 1fr}
  .grid-p{grid-template-columns:1fr 1fr;gap:14px}.pbody{padding:14px}.pbody h3{font-size:17px}.pbody p{display:none}
  .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}

@@ -154,6 +154,12 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}.fld input{font:400 16px "Inter";padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper2);color:var(--ink)}
 .btn.wa{background:#1FAF55;border-color:#1FAF55;color:#fff;text-align:center}.wa.off{opacity:.45;pointer-events:none}
 .cart .btn{text-align:center}.small{font-size:13px;color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:8px}
+.sv{border-top:2px solid var(--ink);padding-top:16px}
+@media (max-width:1180px) and (min-width:901px){.svc{grid-template-columns:repeat(3,1fr)}}
+.sv span{font-size:13px;font-weight:700;color:var(--accent)}
+.sv h4{font-size:18px;font-weight:700;line-height:1.25;margin:8px 0}
+.sv p{font-size:15px;color:var(--muted)}
 .pubs{list-style:none;margin-top:36px}
 .pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
 .contact{background:var(--ink);color:var(--paper);border-bottom:0}
@@ -184,6 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
+ .svc{grid-template-columns:1fr 1fr}
  .grid-p{grid-template-columns:1fr 1fr;gap:14px}.pbody{padding:14px}.pbody h3{font-size:17px}.pbody p{display:none}
  .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}
@@ -225,14 +232,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <article class="card wide full acdi"><div class="thumb"><img src="/img/work/acdi-logo.png" alt="Centre ACDI Bondoukou" loading="lazy"></div><div class="wtxt"><small>Éducation · Bondoukou · 2026</small><h4>Centre ACDI Bondoukou</h4><p>Fondateur d'un centre d'art, de design et d'innovation : peinture, céramique, informatique, infographie et IA pour enfants, adolescents et adultes.</p><a href="https://yadamss.github.io/acdi-bondoukou/" target="_blank" rel="noopener">Découvrir le Centre</a></div></article>
 </div></section>
 
+<section class="s" id="services"><div class="wrap">
+  <div class="kicker" style="margin-bottom:10px">Services</div>
+  <div class="sh"><i>02</i><h2>Mon expertise et mes compétences en design</h2></div>
+  <p class="intro-b" style="font-size:19px;max-width:70ch">Mon travail porte sur la typographie, la recherche visuelle et le design graphique. J'explore la relation entre systèmes d'écriture, culture et langage visuel, avec une attention particulière aux écritures africaines comme le système d'écriture bété.</p>
+  <div class="svc"><div class="sv"><span>01</span><h4>Création typographique</h4><p>Polices et lettrages pour le titrage et le texte, des premières esquisses jusqu'aux polices numériques multilingues.</p></div><div class="sv"><span>02</span><h4>Recherche sur les systèmes d'écriture</h4><p>Recherche historique et visuelle sur les écritures : leurs signes, leur logique et leur place dans la culture.</p></div><div class="sv"><span>03</span><h4>Développement de langages visuels</h4><p>Identités visuelles et systèmes graphiques ancrés dans les symboles culturels, pour des institutions, des marques et des projets.</p></div><div class="sv"><span>04</span><h4>Études des écritures africaines</h4><p>Documentation, numérisation et travail Unicode pour les écritures africaines, en particulier le syllabaire bété.</p></div><div class="sv"><span>05</span><h4>Design typographique expérimental</h4><p>Affiches, installations et objets qui explorent l'écriture comme image — des expositions à la marque de vêtements Bété Type.</p></div></div>
+</div></section>
+
 <section class="s" id="type-design"><div class="wrap">
-  <div class="sh"><i>02</i><h2>Typographie</h2></div>
+  <div class="sh"><i>03</i><h2>Typographie</h2></div>
   <div class="cards"><article class="card feature2"><div class="thumb"><img src="/img/work/matemasie.jpg" alt="Matemasie" loading="lazy"></div><div class="ctxt"><small>Création typographique · Google Fonts · 2024</small><h4>Matemasie</h4><p>Une police d'affichage ultra-grasse aux angles arrondis et aux lettres plus lourdes en haut, inspirée du symbole adinkra Mate Masie — « ce que j'entends, je le garde » —, signe de sagesse, d'écoute et de connaissance. Libre et gratuite.</p><a href="https://fonts.google.com/specimen/Matemasie" target="_blank" rel="noopener">Voir sur Google Fonts</a></div></article><article class="card"><div class="thumb contain"><img src="/img/work/bete-signs.jpg" alt="Police bété" loading="lazy"></div><div class="ctxt"><small>Création typographique · Unicode · depuis 2022</small><h4>Police bété</h4><p>Une police numérique pour le syllabaire bété, créé par Frédéric Bruly Bouabré. Développée à l'ANRT et avec la Script Encoding Initiative (UC Berkeley), elle accompagne la proposition d'encodage du bété dans Unicode.</p><a href="https://www.unicode.org/L2/L2023/23279-bete-report.pdf" target="_blank" rel="noopener">Document de travail Unicode</a></div></article><article class="card"><div class="thumb"><img src="/img/work/bete-poster-charite.jpg" alt="Adam Yeo: Bété Typeface" loading="lazy"></div><div class="ctxt"><small>Publication · Stanford SILICON · 2026</small><h4>Adam Yeo: Bété Typeface</h4><p>Un livret de 28 pages sur la police bété, publié par Sming Sming Books en partenariat avec SILICON, Université Stanford.</p></div></article><article class="card"><div class="thumb"><img src="/img/work/matemasie-alphabet.jpg" alt="Latin étendu pour les langues africaines" loading="lazy"></div><div class="ctxt"><small>Création typographique · Google Fonts · depuis 2023</small><h4>Latin étendu pour les langues africaines</h4><p>Designer typographe sous contrat pour Google Fonts : extension des jeux de caractères latins pour écrire correctement les langues africaines.</p></div></article></div>
   <div class="gal"><figure><img src="/img/work/matemasie-pattern.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-kid-boy-girl.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-symbol.jpg" alt="Mate Masie" loading="lazy"><figcaption>Mate Masie</figcaption></figure><figure><img src="/img/work/bete-glyph-chart.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-alphabet.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-charite.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure></div>
 </div></section>
 
 <section class="s" id="research"><div class="wrap">
-  <div class="sh"><i>03</i><h2>Recherche</h2></div>
+  <div class="sh"><i>04</i><h2>Recherche</h2></div>
   <div class="two">
     <div class="prose"><p>Typographie et dessin de caractères pour les écritures africaines · l'écriture bété et les symboles graphiques de Côte d'Ivoire · humanités numériques et encodage Unicode · patrimoine culturel numérique.</p></div>
     <ul class="list"><li><span>2026 –</span><div>Chercheur associé, projet VIEWS (Visual Interactions in Early Writing Systems), Faculty of Classics, Université de Cambridge — chercheur invité, Lent Term 2026 : « L'écriture comme image : étude visuelle comparative des écritures bété et chinoise ».</div></li><li><span>2026–2028</span><div>Membre du Conseil consultatif, Stanford SILICON et Chaire UNESCO en Futurs numériques, Université Stanford.</div></li><li><span>2024–2025</span><div>SEI Research Fellow, Bété Digital Inclusion Project, Script Encoding Initiative, UC Berkeley.</div></li><li><span>2023 –</span><div>Designer typographe sous contrat, Google Fonts.</div></li></ul>
@@ -240,7 +254,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div></section>
 
 <section class="s" id="exhibitions"><div class="wrap">
-  <div class="sh"><i>04</i><h2>Expositions & conférences</h2></div>
+  <div class="sh"><i>05</i><h2>Expositions & conférences</h2></div>
   <div class="two">
     <ul class="list"><li><span>2026</span><div>Séminaire — « L'écriture comme image : écritures bété et chinoise », Université de Cambridge</div></li><li><span>2025</span><div>Conférencier principal — « L'avenir de l'écriture bété : vers l'inclusion numérique », FACE/INTERFACE, Université Stanford</div></li><li><span>2025</span><div>Exposition et conférence — « Écriture bété : héritage et avenir à l'ère numérique », Institut français de Côte d'Ivoire, Abidjan</div></li><li><span>2025</span><div>World Endangered Writing Day — typographie et préservation des écritures minoritaires (en ligne)</div></li><li><span>2025</span><div>Conférence internationale sur la critique d'art en Afrique, Université de Bondoukou</div></li><li><span>2024</span><div>DeScripto-LARSH, Université polytechnique Hauts-de-France</div></li><li><span>2023</span><div>Inscript Collective · Hello Departures · OCAD University et ANRT · Castel Coucou, Nancy</div></li><li><span>2021</span><div>ATypI All Over — « L'écriture bété (Côte d'Ivoire) en typographie »</div></li><li><span>2021</span><div>Exposition « The Way of Characters », Musée d'art de l'Université des Arts de Nanjing</div></li></ul>
     <div><h3>Jurys et distinctions</h3><ul class="list"><li class="b"><span>•</span><div>Jury, Connect &amp; Create (arts visuels) — UE, Goethe-Institut, Expertise France, Institut français (2026–2028)</div></li><li class="b"><span>•</span><div>Juge, Student Traveling Typography Exhibition « Glyphs of Belonging », Sharjah (2026)</div></li><li class="b"><span>•</span><div>Évaluateur, conférence ATypI 2026 (Stanford et Sharjah)</div></li><li class="b"><span>•</span><div>3ᵉ prix d'excellence de thèse, Université des Arts de Nanjing (2021)</div></li><li class="b"><span>•</span><div>Invité à la World Bank Group Youth Conference, Washington D.C. (2019)</div></li><li class="b"><span>•</span><div>Prix du concours international de livres illustrés « Little Hakka », Chine (2018)</div></li></ul></div>
@@ -249,18 +263,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div></section>
 
 <section class="s" id="writing"><div class="wrap">
-  <div class="sh"><i>05</i><h2>Écrits</h2></div>
+  <div class="sh"><i>06</i><h2>Écrits</h2></div>
   <ul class="pubs" style="margin-top:0"><li>Yeo, A. (2026). <em>Adam Yeo: Bété Typeface</em>. Sming Sming Books / SILICON, Stanford University.</li><li>Yeo, A., Anderson, D., MacLean, J. &amp; Patel, N. (2023). <em>Bété (Ivorian alphabet) working document</em>. Unicode Technical Committee, L2/23-279.</li><li>Yeo, A. &amp; Cao, F. (2021). “A Creative Research Process for a Modern African Graphic Design Identity: The Case of Ivory Coast.” <em>Art and Design Review</em>, 9, 210–231.</li><li>Yeo, A. &amp; Cao, F. (2021). “Study on the Application of the Bété Script in Modern Graphic Design.” <em>Art and Design Review</em>, 9, 156–179.</li></ul>
 </div></section>
 
 <section class="s" id="blog"><div class="wrap">
-  <div class="sh"><i>06</i><h2>Blog</h2></div>
+  <div class="sh"><i>07</i><h2>Blog</h2></div>
   <p class="intro-b">Notes sur la typographie, les écritures africaines, le design et l'enseignement.</p>
   <a class="post" href="/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 octobre 2026 · Typographie · Écriture bété</small><h4>Une écriture qu'on ne peut pas taper est une écriture en danger</h4><p>Pourquoi je passe des années à dessiner les signes du syllabaire bété, et ce qu'il faut pour qu'une écriture africaine vive sur les téléphones et les ordinateurs.</p><span>Lire l'article →</span></a>
 </div></section>
 
 <section class="s contact" id="contact"><div class="wrap">
-  <div class="sh"><i style="color:var(--accent2)">07</i><h2>Travaillons ensemble</h2></div>
+  <div class="sh"><i style="color:var(--accent2)">08</i><h2>Travaillons ensemble</h2></div>
   <p>Pour un projet typographique, une collaboration de recherche, une conférence, un atelier ou une exposition, écrivez-moi.</p>
   <div class="cgrid">
     <a href="mailto:yeo.adam@ubkou.edu.ci"><small>E-mail</small><b>yeo.adam@ubkou.edu.ci</b></a>
