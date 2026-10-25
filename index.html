@@ -86,6 +86,11 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .aboutpic{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin-bottom:26px}
 .post img{width:calc(100% + 64px);margin:-30px -32px 22px;height:200px;object-fit:cover;display:block;background:#fff}
 .post{overflow:hidden}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:22px}
+.posts .post{max-width:none}
+.art .src{margin:40px 0 0;padding:22px 24px;background:var(--paper2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px}
+.art .src p{font-size:16px;line-height:1.6;margin:0 0 10px;color:var(--muted)}
+.art .src a{font-weight:600;color:var(--ink)}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{width:30px;height:30px}
 .logo span{margin-left:-9px}
@@ -271,7 +276,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section class="s" id="blog"><div class="wrap">
   <div class="sh"><i>07</i><h2>Blog</h2></div>
   <p class="intro-b">Notes on typography, African writing systems, design and teaching.</p>
-  <a class="post" href="/blog/a-script-you-cannot-type/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 October 2026 · Type design · Bété script</small><h4>A script you cannot type is a script at risk</h4><p>Why I spend years drawing letters for the Bété syllabary — and what it takes for an African script to live on phones and computers.</p><span>Read the article →</span></a>
+  <div class="posts"><a class="post" href="/blog/a-script-you-cannot-type/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 October 2026 · Type design · Bété script</small><h4>A script you cannot type is a script at risk</h4><p>Why I spend years drawing letters for the Bété syllabary — and what it takes for an African script to live on phones and computers.</p><span>Read the article →</span></a><a class="post" href="/blog/bete-digital-inclusion-project/"><img src="/img/work/bete-glyph-chart.jpg" alt="" loading="lazy"><small>6 June 2025 · Bété script · Digital inclusion</small><h4>Preserving heritage in the digital age: the Bété Digital Inclusion Project</h4><p>A font, a keyboard, an exhibition, school visits and a conference in Abidjan: what a year as SEI Research Fellow taught me about bringing the Bété script into everyday digital life.</p><span>Read the article →</span></a></div>
 </div></section>
 
 <section class="s contact" id="contact"><div class="wrap">

@@ -86,6 +86,11 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .aboutpic{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin-bottom:26px}
 .post img{width:calc(100% + 64px);margin:-30px -32px 22px;height:200px;object-fit:cover;display:block;background:#fff}
 .post{overflow:hidden}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:22px}
+.posts .post{max-width:none}
+.art .src{margin:40px 0 0;padding:22px 24px;background:var(--paper2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px}
+.art .src p{font-size:16px;line-height:1.6;margin:0 0 10px;color:var(--muted)}
+.art .src a{font-weight:600;color:var(--ink)}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{width:30px;height:30px}
 .logo span{margin-left:-9px}
@@ -271,7 +276,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section class="s" id="blog"><div class="wrap">
   <div class="sh"><i>07</i><h2>Blog</h2></div>
   <p class="intro-b">Notes sur la typographie, les écritures africaines, le design et l'enseignement.</p>
-  <a class="post" href="/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 octobre 2026 · Typographie · Écriture bété</small><h4>Une écriture qu'on ne peut pas taper est une écriture en danger</h4><p>Pourquoi je passe des années à dessiner les signes du syllabaire bété, et ce qu'il faut pour qu'une écriture africaine vive sur les téléphones et les ordinateurs.</p><span>Lire l'article →</span></a>
+  <div class="posts"><a class="post" href="/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 octobre 2026 · Typographie · Écriture bété</small><h4>Une écriture qu'on ne peut pas taper est une écriture en danger</h4><p>Pourquoi je passe des années à dessiner les signes du syllabaire bété, et ce qu'il faut pour qu'une écriture africaine vive sur les téléphones et les ordinateurs.</p><span>Lire l'article →</span></a><a class="post" href="/fr/blog/projet-inclusion-numerique-bete/"><img src="/img/work/bete-glyph-chart.jpg" alt="" loading="lazy"><small>6 juin 2025 · Écriture bété · Inclusion numérique</small><h4>Préserver le patrimoine à l'ère numérique : le projet d'inclusion numérique de l'écriture bété</h4><p>Une police, un clavier, une exposition, des visites scolaires et une conférence à Abidjan : ce qu'une année comme chercheur de la SEI m'a appris sur l'entrée de l'écriture bété dans le quotidien numérique.</p><span>Lire l'article →</span></a></div>
 </div></section>
 
 <section class="s contact" id="contact"><div class="wrap">
