@@ -48,7 +48,7 @@ h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(60px,9vw
 .btn:hover{transform:translateY(-1px)}
 .portrait{position:relative}
 .portrait{max-width:400px;justify-self:end;width:100%}
-.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
+.portrait img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
 .portrait::before{content:"";position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:var(--accent2);right:-10%;top:-5%;z-index:-1}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
 .facts div{padding:22px 18px;border-right:1px solid var(--line)}
@@ -69,13 +69,33 @@ h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(38px,5vw
 h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .card.full{margin-top:36px}
-.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden}
+.ctxt,.wtxt{padding:24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.thumb{aspect-ratio:3/2;overflow:hidden;background:#fff}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .thumb img{transform:scale(1.03)}
+.thumb.contain{display:flex;align-items:center;justify-content:center;padding:18px}
+.thumb.contain img{object-fit:contain}
+.card.wide .thumb{aspect-ratio:auto;width:38%;flex:none}
+.card.wide.acdi .thumb{display:flex;align-items:center;justify-content:center;padding:28px;background:#fff}
+.card.wide.acdi .thumb img{object-fit:contain;height:auto;max-height:120px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.gal figure{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/2;background:#fff}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px}
+.aboutpic{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin-bottom:26px}
+.post img{width:calc(100% + 64px);margin:-30px -32px 22px;height:200px;object-fit:cover;display:block;background:#fff}
+.post{overflow:hidden}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:30px;height:30px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1)}}
+:root[data-theme="dark"] .logo img{filter:invert(1)}
 .card small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .card h4{font-size:22px;font-weight:700;line-height:1.2}
 .card p{font-size:15.5px;color:var(--muted);flex:1}
 .card a{font-weight:600;font-size:15px;text-decoration:none;color:var(--ink)}
 .card a::after{content:" →"}
-.card.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:28px}.card.wide p{flex:1}
+.card.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
 .card.feature2{background:var(--deep);color:var(--paper);border:0}.card.feature2 small{color:var(--accent2)}.card.feature2 p,.card.feature2 a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
 .card.feature{grid-column:span 2;background:var(--deep);color:var(--paper);border:0;position:relative;overflow:hidden;min-height:300px}
 .card.feature small{color:var(--accent2)}
@@ -130,7 +150,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
- .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column;align-items:flex-start}
+ .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}
  .list li{grid-template-columns:78px 1fr}
 }
@@ -139,7 +159,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </head>
 <body>
 <header><div class="wrap bar">
-  <a class="logo" href="/fr/">Adam Yeo<span>.</span></a>
+  <a class="logo" href="/fr/"><img src="/img/logo.png" alt="" width="30" height="30">Adam Yeo<span>.</span></a>
   <nav id="nav"><a href="/fr/#top">Accueil</a><a href="/fr/#about">À propos</a><a href="/fr/#type-design">Typographie</a><a href="/fr/#research">Recherche</a><a href="/fr/#exhibitions">Expositions & conférences</a><a href="/fr/#writing">Écrits</a><a href="/fr/#blog">Blog</a><a href="/fr/#contact">Contact</a></nav>
   <div style="display:flex;gap:10px;align-items:center">
     <div class="lang"><b>FR</b><a href="/blog/a-script-you-cannot-type/" hreflang="en">EN</a></div>

@@ -48,7 +48,7 @@ h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(60px,9vw
 .btn:hover{transform:translateY(-1px)}
 .portrait{position:relative}
 .portrait{max-width:400px;justify-self:end;width:100%}
-.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
+.portrait img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
 .portrait::before{content:"";position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:var(--accent2);right:-10%;top:-5%;z-index:-1}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
 .facts div{padding:22px 18px;border-right:1px solid var(--line)}
@@ -69,13 +69,33 @@ h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(38px,5vw
 h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .card.full{margin-top:36px}
-.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden}
+.ctxt,.wtxt{padding:24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.thumb{aspect-ratio:3/2;overflow:hidden;background:#fff}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .thumb img{transform:scale(1.03)}
+.thumb.contain{display:flex;align-items:center;justify-content:center;padding:18px}
+.thumb.contain img{object-fit:contain}
+.card.wide .thumb{aspect-ratio:auto;width:38%;flex:none}
+.card.wide.acdi .thumb{display:flex;align-items:center;justify-content:center;padding:28px;background:#fff}
+.card.wide.acdi .thumb img{object-fit:contain;height:auto;max-height:120px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.gal figure{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/2;background:#fff}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px}
+.aboutpic{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin-bottom:26px}
+.post img{width:calc(100% + 64px);margin:-30px -32px 22px;height:200px;object-fit:cover;display:block;background:#fff}
+.post{overflow:hidden}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:30px;height:30px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1)}}
+:root[data-theme="dark"] .logo img{filter:invert(1)}
 .card small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .card h4{font-size:22px;font-weight:700;line-height:1.2}
 .card p{font-size:15.5px;color:var(--muted);flex:1}
 .card a{font-weight:600;font-size:15px;text-decoration:none;color:var(--ink)}
 .card a::after{content:" →"}
-.card.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:28px}.card.wide p{flex:1}
+.card.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
 .card.feature2{background:var(--deep);color:var(--paper);border:0}.card.feature2 small{color:var(--accent2)}.card.feature2 p,.card.feature2 a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
 .card.feature{grid-column:span 2;background:var(--deep);color:var(--paper);border:0;position:relative;overflow:hidden;min-height:300px}
 .card.feature small{color:var(--accent2)}
@@ -130,7 +150,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  .facts div:nth-child(2){border-right:0}
  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .cards,.cgrid{grid-template-columns:1fr}
- .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column;align-items:flex-start}
+ .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column}.card.wide .thumb{width:100%;aspect-ratio:3/2}.gal{grid-template-columns:1fr 1fr}
  section.s{padding:64px 0}
  .list li{grid-template-columns:78px 1fr}
 }
@@ -139,7 +159,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </head>
 <body>
 <header><div class="wrap bar">
-  <a class="logo" href="/">Adam Yeo<span>.</span></a>
+  <a class="logo" href="/"><img src="/img/logo.png" alt="" width="30" height="30">Adam Yeo<span>.</span></a>
   <nav id="nav"><a href="#top">Home</a><a href="#about">About</a><a href="#type-design">Type Design</a><a href="#research">Research</a><a href="#exhibitions">Exhibitions & Talks</a><a href="#writing">Writing</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
   <div style="display:flex;gap:10px;align-items:center">
     <div class="lang"><b>EN</b><a href="/fr/" hreflang="fr">FR</a></div>
@@ -156,7 +176,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <p class="role">Assistant Professor of Graphic Design, University of Bondoukou, Côte d'Ivoire</p>
     <div class="btns"><a class="btn p" href="#type-design">See the work</a><a class="btn" href="#contact">Get in touch</a></div>
   </div>
-  <div class="portrait"><img src="/img/adam-yeo.jpg" alt="Portrait of Dr Adam Yeo" width="900" height="1125"></div>
+  <div class="portrait"><img src="/img/adam-yeo-bw.jpg" alt="Portrait of Dr Adam Yeo" width="800" height="800"></div>
 </div>
 <div class="wrap"><div class="facts"><div><b>Matemasie</b><span>typeface on Google Fonts</span></div><div><b>Bété</b><span>script proposed to Unicode</span></div><div><b>Cambridge</b><span>VIEWS Visiting Fellow, 2026</span></div><div><b>Stanford</b><span>SILICON advisory board</span></div></div></div>
 </section>
@@ -165,14 +185,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="sh"><i>01</i><h2>About</h2></div>
   <div class="two">
     <div class="prose"><p>Dr Adam Yeo is an artist, designer and typographer, and Assistant Professor of Graphic Design at the University of Bondoukou, Côte d'Ivoire, where he leads the Arts, Design and Multimedia programme. His work moves between art, design and research, and focuses on African writing systems: how they are drawn, how they survive, and how they can live in digital form.</p><p>He is best known for his work on the Bété syllabary, an Indigenous script from Côte d'Ivoire, which he has helped document, digitise and bring to international attention. A script that cannot be typed on a phone or a computer is at risk of being forgotten; type design is one practical way to keep it in use.</p><p>He holds a doctorate in graphic design from Nanjing University of the Arts (China) and was a post-master researcher at the Atelier National de Recherche Typographique (ANRT) in Nancy, France.</p><a class="btn" href="/cv/Adam_Yeo_CV_EN.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></div>
-    <div><h3>Education</h3><ul class="list"><li><span>2022–2024</span><div>Post-master research programme, ANRT, Nancy (France) — a typeface for the Bété script</div></li><li><span>2016–2021</span><div>PhD in Graphic Design, Nanjing University of the Arts (China) — third prize for doctoral excellence</div></li><li><span>2013–2016</span><div>MA in Art & Design (Illustration), Central China Normal University, Wuhan</div></li><li><span>2004–2008</span><div>BA in Painting, École des Beaux-Arts, Abidjan</div></li></ul></div>
+    <div><img class="aboutpic" src="/img/adam-yeo.jpg" alt="Dr Adam Yeo" loading="lazy"><h3>Education</h3><ul class="list"><li><span>2022–2024</span><div>Post-master research programme, ANRT, Nancy (France) — a typeface for the Bété script</div></li><li><span>2016–2021</span><div>PhD in Graphic Design, Nanjing University of the Arts (China) — third prize for doctoral excellence</div></li><li><span>2013–2016</span><div>MA in Art & Design (Illustration), Central China Normal University, Wuhan</div></li><li><span>2004–2008</span><div>BA in Painting, École des Beaux-Arts, Abidjan</div></li></ul></div>
   </div>
-  <article class="card wide full"><div><small>Education · Bondoukou · 2026</small><h4>Centre ACDI Bondoukou</h4></div><p>Founder of a centre for art, design and innovation offering painting, ceramics, computing, graphic design and AI workshops for children, teenagers and adults.</p><a href="https://yadamss.github.io/acdi-bondoukou/" target="_blank" rel="noopener">Visit the centre</a></article>
+  <article class="card wide full acdi"><div class="thumb"><img src="/img/work/acdi-logo.png" alt="Centre ACDI Bondoukou" loading="lazy"></div><div class="wtxt"><small>Education · Bondoukou · 2026</small><h4>Centre ACDI Bondoukou</h4><p>Founder of a centre for art, design and innovation offering painting, ceramics, computing, graphic design and AI workshops for children, teenagers and adults.</p><a href="https://yadamss.github.io/acdi-bondoukou/" target="_blank" rel="noopener">Visit the centre</a></div></article>
 </div></section>
 
 <section class="s" id="type-design"><div class="wrap">
   <div class="sh"><i>02</i><h2>Type Design</h2></div>
-  <div class="cards"><article class="card feature2"><small>Type design · Google Fonts · 2024</small><h4>Matemasie</h4><p>An ultra-bold display typeface with rounded edges and top-heavy letterforms, inspired by the Adinkra symbol Mate Masie — “what I hear, I keep” — a sign of wisdom, listening and knowledge. Free and open source.</p><a href="https://fonts.google.com/specimen/Matemasie" target="_blank" rel="noopener">View on Google Fonts</a></article><article class="card"><small>Type design · Unicode · since 2022</small><h4>Bété typeface</h4><p>A digital typeface for the Bété syllabary, created by Frédéric Bruly Bouabré. Developed at ANRT and with the Script Encoding Initiative (UC Berkeley), it supports the proposal to encode Bété in Unicode.</p><a href="https://www.unicode.org/L2/L2023/23279-bete-report.pdf" target="_blank" rel="noopener">Unicode working document</a></article><article class="card"><small>Publication · Stanford SILICON · 2026</small><h4>Adam Yeo: Bété Typeface</h4><p>A 28-page booklet on the Bété typeface, published by Sming Sming Books in partnership with SILICON, Stanford University.</p></article><article class="card"><small>Type design · Google Fonts · since 2023</small><h4>Extended Latin for African languages</h4><p>Contract type designer for Google Fonts, extending Latin character sets so that African languages can be written correctly in digital type.</p></article></div>
+  <div class="cards"><article class="card feature2"><div class="thumb"><img src="/img/work/matemasie.jpg" alt="Matemasie" loading="lazy"></div><div class="ctxt"><small>Type design · Google Fonts · 2024</small><h4>Matemasie</h4><p>An ultra-bold display typeface with rounded edges and top-heavy letterforms, inspired by the Adinkra symbol Mate Masie — “what I hear, I keep” — a sign of wisdom, listening and knowledge. Free and open source.</p><a href="https://fonts.google.com/specimen/Matemasie" target="_blank" rel="noopener">View on Google Fonts</a></div></article><article class="card"><div class="thumb contain"><img src="/img/work/bete-signs.jpg" alt="Bété typeface" loading="lazy"></div><div class="ctxt"><small>Type design · Unicode · since 2022</small><h4>Bété typeface</h4><p>A digital typeface for the Bété syllabary, created by Frédéric Bruly Bouabré. Developed at ANRT and with the Script Encoding Initiative (UC Berkeley), it supports the proposal to encode Bété in Unicode.</p><a href="https://www.unicode.org/L2/L2023/23279-bete-report.pdf" target="_blank" rel="noopener">Unicode working document</a></div></article><article class="card"><div class="thumb"><img src="/img/work/bete-poster-charite.jpg" alt="Adam Yeo: Bété Typeface" loading="lazy"></div><div class="ctxt"><small>Publication · Stanford SILICON · 2026</small><h4>Adam Yeo: Bété Typeface</h4><p>A 28-page booklet on the Bété typeface, published by Sming Sming Books in partnership with SILICON, Stanford University.</p></div></article><article class="card"><div class="thumb"><img src="/img/work/matemasie-alphabet.jpg" alt="Extended Latin for African languages" loading="lazy"></div><div class="ctxt"><small>Type design · Google Fonts · since 2023</small><h4>Extended Latin for African languages</h4><p>Contract type designer for Google Fonts, extending Latin character sets so that African languages can be written correctly in digital type.</p></div></article></div>
+  <div class="gal"><figure><img src="/img/work/matemasie-pattern.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-kid-boy-girl.jpg" alt="Matemasie" loading="lazy"><figcaption>Matemasie</figcaption></figure><figure><img src="/img/work/matemasie-symbol.jpg" alt="Mate Masie" loading="lazy"><figcaption>Mate Masie</figcaption></figure><figure><img src="/img/work/bete-glyph-chart.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-alphabet.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure><figure><img src="/img/work/bete-poster-charite.jpg" alt="Bété" loading="lazy"><figcaption>Bété</figcaption></figure></div>
 </div></section>
 
 <section class="s" id="research"><div class="wrap">
@@ -189,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <ul class="list"><li><span>2026</span><div>Seminar — “Writing as image: Bété and Chinese scripts”, University of Cambridge</div></li><li><span>2025</span><div>Keynote — “The future of the Bété script: towards digital inclusion”, FACE/INTERFACE, Stanford University</div></li><li><span>2025</span><div>Exhibition & talk — “Bété script: heritage and future in the digital age”, Institut français de Côte d'Ivoire, Abidjan</div></li><li><span>2025</span><div>World Endangered Writing Day — typography and the preservation of minority scripts (online)</div></li><li><span>2025</span><div>International conference on art criticism in Africa, University of Bondoukou</div></li><li><span>2024</span><div>DeScripto-LARSH, Université Polytechnique Hauts-de-France</div></li><li><span>2023</span><div>Inscript Collective · Hello Departures · OCAD University &amp; ANRT · Castel Coucou, Nancy</div></li><li><span>2021</span><div>ATypI All Over — “The Bété script (Côte d'Ivoire) in typography”</div></li><li><span>2021</span><div>Exhibition “The Way of Characters”, Art Museum of Nanjing University of the Arts</div></li></ul>
     <div><h3>Juries & recognition</h3><ul class="list"><li class="b"><span>•</span><div>Jury, Connect &amp; Create (visual arts) — EU, Goethe-Institut, Expertise France, Institut français (2026–2028)</div></li><li class="b"><span>•</span><div>Judge, Student Traveling Typography Exhibition “Glyphs of Belonging”, Sharjah (2026)</div></li><li class="b"><span>•</span><div>Reviewer, ATypI 2026 conference (Stanford &amp; Sharjah)</div></li><li class="b"><span>•</span><div>Third prize for doctoral excellence, Nanjing University of the Arts (2021)</div></li><li class="b"><span>•</span><div>Invited to the World Bank Group Youth Conference, Washington D.C. (2019)</div></li><li class="b"><span>•</span><div>Award, “Little Hakka” international picture-book competition, China (2018)</div></li></ul></div>
   </div>
-  <article class="card wide full"><div><small>Art & design · since 2018</small><h4>Scripts as images</h4></div><p>Paintings, posters and installations that turn graphic symbols and scripts from Côte d'Ivoire into visual experiences — exhibited in Abidjan, Nanjing, Beijing, Wuhan and Clermont-Ferrand.</p></article>
+  <article class="card wide full"><div class="thumb"><img src="/img/work/bete-poster-alphabet.jpg" alt="Scripts as images" loading="lazy"></div><div class="wtxt"><small>Art & design · since 2018</small><h4>Scripts as images</h4><p>Paintings, posters and installations that turn graphic symbols and scripts from Côte d'Ivoire into visual experiences — exhibited in Abidjan, Nanjing, Beijing, Wuhan and Clermont-Ferrand.</p></div></article>
 </div></section>
 
 <section class="s" id="writing"><div class="wrap">
@@ -200,7 +221,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section class="s" id="blog"><div class="wrap">
   <div class="sh"><i>06</i><h2>Blog</h2></div>
   <p class="intro-b">Notes on typography, African writing systems, design and teaching.</p>
-  <a class="post" href="/blog/a-script-you-cannot-type/"><small>25 October 2026 · Type design · Bété script</small><h4>A script you cannot type is a script at risk</h4><p>Why I spend years drawing letters for the Bété syllabary — and what it takes for an African script to live on phones and computers.</p><span>Read the article →</span></a>
+  <a class="post" href="/blog/a-script-you-cannot-type/"><img src="/img/work/bete-signs.jpg" alt="" loading="lazy"><small>25 October 2026 · Type design · Bété script</small><h4>A script you cannot type is a script at risk</h4><p>Why I spend years drawing letters for the Bété syllabary — and what it takes for an African script to live on phones and computers.</p><span>Read the article →</span></a>
 </div></section>
 
 <section class="s contact" id="contact"><div class="wrap">
