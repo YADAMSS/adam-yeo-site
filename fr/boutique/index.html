@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Boutique — Adam Yeo</title>
-<meta name="description" content="Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
+<meta name="description" content="T-shirts, affiches et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
 <link rel="canonical" href="https://adamyeo.com/fr/boutique/">
 <link rel="alternate" hreflang="en" href="https://adamyeo.com/blog/a-script-you-cannot-type/">
 <link rel="alternate" hreflang="fr" href="https://adamyeo.com/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/">
 <meta property="og:title" content="Boutique — Adam Yeo">
-<meta property="og:description" content="Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
+<meta property="og:description" content="T-shirts, affiches et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.">
 <meta property="og:image" content="https://adamyeo.com/img/og.jpg">
 <meta property="og:url" content="https://adamyeo.com/fr/boutique/">
 <meta name="twitter:card" content="summary_large_image">
@@ -121,17 +121,19 @@ h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;m
 .art .sig img{width:56px;height:56px;border-radius:50%;object-fit:cover}
 .art .sig b{display:block}
 .art .sig span{color:var(--muted);font-size:14.5px}
+.brand{display:flex;gap:22px;align-items:center;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:6px 0 26px}.brand img{width:72px;height:72px;flex:none}.brand h3{font-family:"Fraunces",Georgia,serif;font-size:22px;text-transform:none;letter-spacing:0;color:var(--ink);margin:0 0 6px}.brand p{color:var(--muted);font-size:15.5px;max-width:75ch}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{filter:invert(1)}}:root[data-theme="dark"] .brand img{filter:invert(1)}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 26px}
 .chip{border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:8px 16px;font:600 14px "Inter";cursor:pointer}
 .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .prod{background:var(--paper2);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.pimg{aspect-ratio:1;background:#ECE5DB;overflow:hidden}.pimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.prod:hover .pimg img{transform:scale(1.03)}
+.pimg{aspect-ratio:4/3;background:#ECE5DB;overflow:hidden}.pimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.prod:hover .pimg img{transform:scale(1.03)}
 .pbody{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
 .pbody small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .pbody h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:21px;line-height:1.2;text-transform:none;letter-spacing:0;color:var(--ink);margin:0}
 .pbody p{font-size:15px;color:var(--muted);flex:1}
-.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 6px}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;flex-wrap:wrap;margin:4px 0 6px}.prow .price{flex-basis:100%}
 .price{font-size:16px}
 .opt{font-size:14px;color:var(--muted);display:flex;gap:6px;align-items:center}
 .opt select{font:500 14px "Inter";padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
@@ -202,9 +204,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <main><section class="s shop"><div class="wrap">
   <div class="sh"><h2 style="font-size:clamp(44px,6vw,72px)">Boutique</h2></div>
-  <p class="intro-b" style="margin-top:-18px;font-size:19px">Affiches, T-shirts et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.</p>
-  <div class="chips"><button class="chip on" data-c="*">Tout</button><button class="chip" data-c="Affiche">Affiches</button><button class="chip" data-c="T-shirt">T-shirts</button><button class="chip" data-c="Livre">Livres</button></div>
-  <div class="grid-p"><article class="prod" data-c="Affiche" data-id="poster-charite" data-name="« La Charité » — affiche typographique bété" data-price="0">
+  <p class="intro-b" style="margin-top:-18px;font-size:19px">T-shirts, affiches et livres issus de mon travail sur les écritures africaines. Commandez en quelques clics sur WhatsApp : je confirme la disponibilité, le prix et la livraison, puis vous payez par Mobile Money ou par carte.</p>
+  <div class="brand"><img src="/img/logo.png" alt="Bhê"><div><h3>Bété Type — Wear the script.</h3><p>Ma marque de T-shirts. Collection 01 — Bhê : six pièces autour du glyphe Bhê du syllabaire bété créé par Frédéric Bruly Bouabré (448 signes). Bhê signifie « choisis ta préférence ». Écrire → Porter → Transmettre.</p></div></div>
+  <div class="chips"><button class="chip on" data-c="*">Tout</button><button class="chip" data-c="T-shirt">T-shirts Bété Type</button><button class="chip" data-c="Affiche">Affiches</button><button class="chip" data-c="Livre">Livres</button></div>
+  <div class="grid-p"><article class="prod" data-c="T-shirt" data-id="bt-bhe-core" data-name="Bhê Core — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-bhe-core.jpg" alt="Bhê Core — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Bhê Core — Bété Type</h3><p>La pièce emblématique. Glyphe Bhê brodé sur la poitrine, « Bété Type — Wear the script. » au dos, « Bété / 448 » sur la manche. Coupe oversize, coton premium.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Noir</option><option>Écru</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="bt-bhe-script" data-name="Bhê Script — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-bhe-script.jpg" alt="Bhê Script — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Bhê Script — Bété Type</h3><p>Le vêtement devient une page typographique : grand glyphe Bhê et « Wear the script. » au dos. Coupe oversize, coton premium.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Écru</option><option>Noir</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="bt-bete-448" data-name="Bété / 448 — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-bete-448.jpg" alt="Bété / 448 — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Bété / 448 — Bété Type</h3><p>Le code culturel : « Bété / 448 » sur la poitrine — les 448 signes du syllabaire — et un très grand glyphe Bhê au dos.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Noir</option><option>Écru</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="bt-choisis" data-name="Choisis ta préférence — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-choisis-ta-preference.jpg" alt="Choisis ta préférence — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Choisis ta préférence — Bété Type</h3><p>Le sens du glyphe : Bhê signifie « choisis ta préférence ». Glyphe et message devant et au dos.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Écru</option><option>Noir</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="bt-bhe-grid" data-name="Bhê Grid — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-bhe-grid.jpg" alt="Bhê Grid — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Bhê Grid — Bété Type</h3><p>L'expérimentation typographique : une grille de glyphes Bhê au dos, petit Bhê sur la poitrine. Coupe oversize, coton premium.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Noir</option><option>Écru</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="bt-bhe-statement" data-name="Bhê Statement — Bété Type" data-price="0">
+  <div class="pimg"><img src="/img/shop/bete-type-bhe-statement.jpg" alt="Bhê Statement — Bété Type" loading="lazy"></div>
+  <div class="pbody"><small>T-shirt</small><h3>Bhê Statement — Bété Type</h3><p>La pièce manifeste : un Bhê XXL sur tout le dos, « Wear the script. » en dessous. Coupe oversize, coton premium.</p>
+  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Couleur <select class="col"><option>Noir</option><option>Écru</option></select></label><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
+  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Affiche" data-id="poster-charite" data-name="« La Charité » — affiche typographique bété" data-price="0">
   <div class="pimg"><img src="/img/shop/poster-charite.jpg" alt="« La Charité » — affiche typographique bété" loading="lazy"></div>
   <div class="pbody"><small>Affiche</small><h3>« La Charité » — affiche typographique bété</h3><p>Une affiche construite avec les signes du syllabaire bété. Impression sur papier de qualité, signée.</p>
   <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
@@ -220,14 +247,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="pimg"><img src="/img/shop/poster-matemasie.jpg" alt="Affiche Matemasie" loading="lazy"></div>
   <div class="pbody"><small>Affiche</small><h3>Affiche Matemasie</h3><p>La police Matemasie et le symbole adinkra Mate Masie — « ce que j'entends, je le garde ».</p>
   <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Format <select><option>A3</option><option>A2</option></select></label></div>
-  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="tshirt-matemasie" data-name="T-shirt Matemasie « Kid Boy Girl »" data-price="0">
-  <div class="pimg"><img src="/img/shop/tshirt-matemasie.jpg" alt="T-shirt Matemasie « Kid Boy Girl »" loading="lazy"></div>
-  <div class="pbody"><small>T-shirt</small><h3>T-shirt Matemasie « Kid Boy Girl »</h3><p>T-shirt en coton bleu marine, lettrage Matemasie.</p>
-  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
-  <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="T-shirt" data-id="tshirt-bete" data-name="T-shirt Signes bété" data-price="0">
-  <div class="pimg"><img src="/img/shop/tshirt-bete.jpg" alt="T-shirt Signes bété" loading="lazy"></div>
-  <div class="pbody"><small>T-shirt</small><h3>T-shirt Signes bété</h3><p>T-shirt en coton blanc imprimé de quatre signes du syllabaire bété.</p>
-  <div class="prow"><b class="price">Prix sur demande</b><label class="opt">Taille <select><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label></div>
   <button class="btn p add">Ajouter à la commande</button></div></article><article class="prod" data-c="Livre" data-id="livre-bete" data-name="« Adam Yeo: Bété Typeface »" data-price="0">
   <div class="pimg"><img src="/img/shop/livre-bete-typeface.jpg" alt="« Adam Yeo: Bété Typeface »" loading="lazy"></div>
   <div class="pbody"><small>Livre</small><h3>« Adam Yeo: Bété Typeface »</h3><p>Livret de 28 pages sur la police bété, publié par Sming Sming Books avec SILICON (Université Stanford).</p>
@@ -280,7 +299,7 @@ function link(){
   $('#wa').classList.toggle('off',!cart.length);
 }
 document.querySelectorAll('.prod .add').forEach(function(b){b.onclick=function(){
-  var c=b.closest('.prod'), s=c.querySelector('select'), o=s?s.value:'';
+  var c=b.closest('.prod'), o=[].map.call(c.querySelectorAll('select'),function(x){return x.value}).join(' · ');
   var id=c.dataset.id+'|'+o, f=cart.find(function(x){return x.id===id});
   if(f)f.q++; else cart.push({id:id,n:c.dataset.name,o:o,p:+c.dataset.price||0,q:1});
   save(); render(); b.textContent=T.added; setTimeout(function(){b.textContent=T.add},1400);
