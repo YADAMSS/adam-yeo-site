@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Une écriture qu'on ne peut pas taper est une écriture en danger — Adam Yeo</title>
+<meta name="description" content="Pourquoi je passe des années à dessiner les signes du syllabaire bété, et ce qu&#x27;il faut pour qu&#x27;une écriture africaine vive sur les téléphones et les ordinateurs.">
+<link rel="canonical" href="https://adamyeo.com/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/">
+<link rel="alternate" hreflang="en" href="https://adamyeo.com/blog/a-script-you-cannot-type/">
+<link rel="alternate" hreflang="fr" href="https://adamyeo.com/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/">
+<meta property="og:title" content="Une écriture qu'on ne peut pas taper est une écriture en danger — Adam Yeo">
+<meta property="og:description" content="Pourquoi je passe des années à dessiner les signes du syllabaire bété, et ce qu&#x27;il faut pour qu&#x27;une écriture africaine vive sur les téléphones et les ordinateurs.">
+<meta property="og:image" content="https://adamyeo.com/img/og.jpg">
+<meta property="og:url" content="https://adamyeo.com/fr/blog/une-ecriture-qu-on-ne-peut-pas-taper/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F1EA;--paper2:#EFE7DC;--ink:#1B1A17;--muted:#5E574E;--line:#DDD3C5;--accent:#D9481C;--accent2:#E9A23B;--deep:#123A3F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#161512;--paper2:#1F1D19;--ink:#F3EDE4;--muted:#B5AC9F;--line:#35312B;--accent:#F06A3C;--accent2:#F0B24E;--deep:#9FD3D0}}
+:root[data-theme="dark"]{--paper:#161512;--paper2:#1F1D19;--ink:#F3EDE4;--muted:#B5AC9F;--line:#35312B;--accent:#F06A3C;--accent2:#F0B24E;--deep:#9FD3D0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 "Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:23px;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:17px;align-items:center}
+nav a{text-decoration:none;font-size:14.5px;white-space:nowrap;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;font-weight:600}
+.lang a,.lang b{padding:5px 11px;text-decoration:none}
+.lang b{background:var(--ink);color:var(--paper)}
+.menu{display:none;background:none;border:0;font:600 15px "Inter";color:var(--ink);cursor:pointer}
+.hero{padding:72px 0 56px}
+.hero .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:center;margin-bottom:56px}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(60px,9vw,118px);line-height:.95;margin:14px 0 22px;letter-spacing:-.025em}
+.lead{font-size:clamp(19px,2.1vw,23px);line-height:1.5;max-width:34ch}
+.role{margin-top:16px;color:var(--muted);font-size:15px}
+.btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.portrait{position:relative}
+.portrait{max-width:400px;justify-self:end;width:100%}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:220px 220px 18px 18px;display:block}
+.portrait::before{content:"";position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:var(--accent2);right:-10%;top:-5%;z-index:-1}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+.facts div{padding:22px 18px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:24px;line-height:1.1}
+.facts span{font-size:14px;color:var(--muted)}
+section.s{padding:88px 0;border-bottom:1px solid var(--line)}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+.sh i{font-style:normal;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.1em}
+h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(38px,5vw,56px);line-height:1}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.prose p{margin-bottom:16px;max-width:62ch}
+.prose p:first-child{font-size:20px;line-height:1.55}
+.list{list-style:none}
+.list li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:15.5px}
+.list li.b{grid-template-columns:16px 1fr}
+.list li span{color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
+h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card.full{margin-top:36px}
+.card{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.card small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.card h4{font-size:22px;font-weight:700;line-height:1.2}
+.card p{font-size:15.5px;color:var(--muted);flex:1}
+.card a{font-weight:600;font-size:15px;text-decoration:none;color:var(--ink)}
+.card a::after{content:" →"}
+.card.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:28px}.card.wide p{flex:1}
+.card.feature2{background:var(--deep);color:var(--paper);border:0}.card.feature2 small{color:var(--accent2)}.card.feature2 p,.card.feature2 a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
+.card.feature{grid-column:span 2;background:var(--deep);color:var(--paper);border:0;position:relative;overflow:hidden;min-height:300px}
+.card.feature small{color:var(--accent2)}
+.card.feature p,.card.feature a{color:color-mix(in srgb,var(--paper) 85%,transparent)}
+.card.feature .spec{font-family:"Fraunces",Georgia,serif;font-size:clamp(56px,8vw,104px);line-height:.95;margin:6px 0 4px;color:var(--paper)}
+.intro-b{color:var(--muted);margin:-14px 0 26px;max-width:60ch}
+.post{display:block;text-decoration:none;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:30px 32px;max-width:820px}
+.post:hover{border-color:var(--ink)}
+.post small{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.post h4{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,3.2vw,36px);line-height:1.15;margin:10px 0 10px}
+.post p{color:var(--muted);margin-bottom:14px}
+.post span{font-weight:600}
+.art{max-width:720px;margin:0 auto;padding:56px 24px 88px}
+.art .back{font-weight:600;text-decoration:none;color:var(--muted);font-size:15px}
+.art small{display:block;margin-top:34px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.art h1{font-size:clamp(38px,6vw,62px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.art .meta{color:var(--muted);font-size:15px;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.art p{font-size:18.5px;line-height:1.75;margin-bottom:22px}
+.art p:first-of-type{font-size:21px;line-height:1.6}
+.art h2{font-size:30px;margin:44px 0 16px}
+.art .sig{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;gap:16px;align-items:center}
+.art .sig img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.art .sig b{display:block}
+.art .sig span{color:var(--muted);font-size:14.5px}
+.pubs{list-style:none;margin-top:36px}
+.pubs li{padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;max-width:80ch}
+.contact{background:var(--ink);color:var(--paper);border-bottom:0}
+.contact h2{color:var(--paper)}
+.contact p{color:color-mix(in srgb,var(--paper) 80%,transparent);font-size:19px;max-width:44ch;margin:18px 0 34px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cgrid a,.cgrid div{display:block;padding:20px 22px;border:1px solid color-mix(in srgb,var(--paper) 22%,transparent);border-radius:16px;text-decoration:none}
+.cgrid small{display:block;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:4px}
+.cgrid b{font-weight:600;font-size:16.5px;word-break:break-word}
+.social{display:flex;gap:18px;margin-top:30px;flex-wrap:wrap}
+.social a{color:var(--paper);font-weight:600;font-size:15px}
+footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 60%,transparent);font-size:13.5px;padding:22px 0 30px;border-top:1px solid color-mix(in srgb,var(--paper) 14%,transparent)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.theme{background:none;border:1px solid var(--line);border-radius:999px;color:var(--ink);font:600 13px "Inter";padding:5px 10px;cursor:pointer}
+@media (max-width:1080px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+ nav.open{display:flex} nav a{padding:10px 0;font-size:17px}
+ .menu{display:block}
+}
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+ nav.open{display:flex} nav a{padding:10px 0;font-size:17px}
+ .menu{display:block}
+ .hero{padding:40px 0}
+ .hero .grid,.two{grid-template-columns:1fr;gap:36px}
+ .portrait{max-width:240px;justify-self:start;margin:28px 0 0 8px}
+ .facts{grid-template-columns:1fr 1fr}
+ .facts div:nth-child(2){border-right:0}
+ .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .cards,.cgrid{grid-template-columns:1fr}
+ .card.feature,.card.wide{grid-column:auto}.card.wide{flex-direction:column;align-items:flex-start}
+ section.s{padding:64px 0}
+ .list li{grid-template-columns:78px 1fr}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adam Yeo","honorificPrefix":"Dr","jobTitle":"Enseignant-chercheur en design graphique, Université de Bondoukou, Côte d'Ivoire","url":"https://adamyeo.com/","image":"https://adamyeo.com/img/adam-yeo.jpg","sameAs":["https://www.linkedin.com/in/adam-yeo/","https://github.com/YADAMSS","https://fonts.google.com/specimen/Matemasie"]}</script>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="/fr/">Adam Yeo<span>.</span></a>
+  <nav id="nav"><a href="/fr/#top">Accueil</a><a href="/fr/#about">À propos</a><a href="/fr/#type-design">Typographie</a><a href="/fr/#research">Recherche</a><a href="/fr/#exhibitions">Expositions & conférences</a><a href="/fr/#writing">Écrits</a><a href="/fr/#blog">Blog</a><a href="/fr/#contact">Contact</a></nav>
+  <div style="display:flex;gap:10px;align-items:center">
+    <div class="lang"><b>FR</b><a href="/blog/a-script-you-cannot-type/" hreflang="en">EN</a></div>
+    <button class="menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">Menu</button>
+  </div>
+</div></header>
+
+<main><article class="art">
+  <a class="back" href="/fr/#blog">← Retour au blog</a>
+  <small>Typographie · Écriture bété</small>
+  <h1>Une écriture qu'on ne peut pas taper est une écriture en danger</h1>
+  <div class="meta">Adam Yeo · 25 octobre 2026 · 5 min de lecture</div>
+  <p>Quand on me demande pourquoi je dessine des caractères pour les écritures africaines, je réponds souvent par un test simple : essayez d'écrire un message dans votre propre écriture sur votre téléphone. Si vous n'y arrivez pas, votre écriture perd déjà du terrain — non parce que les gens ne s'y intéressent plus, mais parce que les outils qu'ils utilisent chaque jour ignorent qu'elle existe.</p><h2>Une écriture née sur le papier</h2><p>Le syllabaire bété a été créé en Côte d'Ivoire par l'artiste Frédéric Bruly Bouabré au milieu du XXᵉ siècle. Chaque signe représente une syllabe, et beaucoup viennent de dessins d'objets du quotidien. C'est à la fois un système d'écriture et un ensemble d'images — c'est précisément ce qui m'a attiré, en tant que designer et peintre.</p><p>Pendant des décennies, cette écriture a surtout vécu sur le papier : dans les carnets de Bouabré, dans des dessins exposés dans les musées du monde entier, entre les mains d'un petit cercle de personnes qui l'avaient apprise. Admirée, oui. Utilisée au quotidien, rarement.</p><h2>Trois conditions pour une écriture vivante</h2><p>Pour qu'une écriture soit utilisée aujourd'hui, trois choses doivent exister ensemble. D'abord une norme : les caractères doivent être encodés dans Unicode, pour que chaque téléphone et chaque ordinateur reconnaisse un signe comme le même caractère. Ensuite une police : des caractères bien dessinés, lisibles en petite taille sur un écran. Enfin une communauté d'usage : des écoles, des artistes, des familles et des institutions qui écrivent réellement avec.</p><p>S'il en manque une seule, l'écriture reste dans les archives. C'est pourquoi mon travail sur le bété va de la table à dessin aux comités techniques : de mes recherches à l'Atelier National de Recherche Typographique de Nancy jusqu'au document de travail soumis au comité technique d'Unicode en 2023 avec des collègues de la Script Encoding Initiative.</p><h2>Ce que dessiner une police veut vraiment dire</h2><p>Dessiner une police pour une écriture comme le bété, ce n'est pas recopier des signes manuscrits. Chaque glyphe doit être redessiné pour que l'ensemble soit cohérent : même graisse, même rythme, même logique de courbes et de fûts. Les signes doivent rester reconnaissables pour ceux qui les connaissent, tout en devenant lisibles sur un téléphone. Chaque décision est un équilibre entre fidélité à la source et exigences du caractère numérique.</p><p>Ce travail apprend aussi l'humilité. Une écriture porte la mémoire de ceux qui l'ont faite. Le typographe ne la possède pas : il la sert.</p><h2>Pourquoi c'est important au-delà du bété</h2><p>Partout en Afrique, beaucoup de langues et d'écritures sont encore mal prises en charge par les outils numériques : lettres manquantes, accents erronés, polices qui ne s'affichent pas. Chacun de ces manques dit silencieusement aux jeunes que leur façon d'écrire n'a pas sa place dans le monde moderne. La typographie peut dire le contraire.</p><p>C'est aussi pour cela que j'enseigne. À l'Université de Bondoukou, et désormais au Centre ACDI Bondoukou, je veux que les étudiants comprennent que les lettres de leurs écrans ont été dessinées par des personnes — et qu'eux aussi peuvent dessiner les lettres de leurs propres langues.</p><p>Une écriture qu'on peut taper peut être enseignée, partagée, recherchée et aimée à nouveau. C'est l'objectif : non pas garder les écritures africaines derrière une vitrine, mais les remettre entre les mains des gens.</p>
+  <div class="sig"><img src="/img/adam-yeo.jpg" alt=""><div><b>Dr Adam Yeo</b><span>Enseignant-chercheur en design graphique, Université de Bondoukou, Côte d'Ivoire</span></div></div>
+</article></main>
+
+<footer><div class="wrap"><span>© <span id="y">2026</span> Adam Yeo · Composé en Fraunces et Inter.</span><button class="theme" aria-label="Light / dark" onclick="var d=document.documentElement,c=d.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';d.setAttribute('data-theme',n);try{localStorage.setItem('t',n)}catch(e){}">Light / Dark</button></div></footer>
+<script>try{var s=localStorage.getItem('t');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});</script>
+</body></html>
