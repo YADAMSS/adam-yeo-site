@@ -299,8 +299,10 @@ function render(){
   $('#cnt').textContent=n; $('#cartbtn').classList.toggle('has',n>0); link();
 }
 function link(){
-  var lines=cart.map(function(it){return '• '+it.q+' × '+it.n+(it.o?' ('+it.o+')':'')});
+  var tot=0,known=true;
+  var lines=cart.map(function(it){ if(it.p){tot+=it.p*it.q}else{known=false} return '• '+it.q+' × '+it.n+(it.o?' ('+it.o+')':'')+(it.p?' — '+fmt(it.p*it.q):'')});
   var m=T.msg_hi+'\n'+lines.join('\n');
+  if(cart.length&&known&&tot)m+='\n'+T.total+' : '+fmt(tot);
   var nm=$('#cn').value.trim(), ct=$('#cc').value.trim();
   if(nm)m+='\n'+T.msg_name+' : '+nm; if(ct)m+='\n'+T.msg_city+' : '+ct;
   $('#wa').href='https://wa.me/'+SHOP.wa+'?text='+encodeURIComponent(m);
